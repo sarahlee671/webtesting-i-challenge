@@ -1,22 +1,23 @@
 module.exports = {
-  succeed,
-  fail,
+  // succeed,
+  // fail,
   repair,
-  get,
+  // get,
 };
 
-function succeed(item) {
-  return { ...item };
-}
+// function succeed(item) {
+//   return { ...item };
+// }
 
-function fail(item) {
-  return { ...item };
-}
+// function fail(item) {
+//   return { ...item };
+// }
 
 function repair(item) {
-  return { ...item };
+
+  return { ...item, durability: 100 };
 }
 
-function get(item) {
-  return { ...item };
-}
+// function get(item) {
+//   return { ...item };
+// }
