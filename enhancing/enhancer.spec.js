@@ -1,4 +1,4 @@
-const {repair, succeed, fail} = require('./enhancer.js');
+const {repair, succeed, fail, get} = require('./enhancer.js');
 
 describe('enhancer.js', () => {
     describe('repair()', () => {
@@ -27,6 +27,11 @@ describe('enhancer.js', () => {
 
         it('should decrease durability by 10 and decrease enhancement by 1', () => {
             expect(fail({enhancement: 18, durability: 40})).toEqual({enhancement: 17, durability: 30})
+        })
+    })
+    describe('get()', () => {
+        it('should return name with the new name properties', () => {
+            expect(get({enhancement: 5, name: 'sarah'}).name).toBe('[+5] sarah')
         })
     })
 })
